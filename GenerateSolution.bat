@@ -28,7 +28,7 @@ if "%MISSING%"=="0" (
     if errorlevel 1 (
         echo %ESC%[31m[ERR] CMake est introuvable dans le PATH.%ESC%[0m
         echo %ESC%[33m[INFO] Installez CMake ^(https://cmake.org/download^).%ESC%[0m
-        goto CHOICE
+        exit /b 1
     )
     if not exist "%PROJECT_DIR%\out\binaries" (
         mkdir "%PROJECT_DIR%\out\binaries"
